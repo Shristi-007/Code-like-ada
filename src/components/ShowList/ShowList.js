@@ -15,7 +15,7 @@ const ShowList=()=>{
     },[stationId])
 
     const getData=()=>{
-        fetch(`https://codelikeada.lgads.tv/epg/listings?stationId=${stationId?stationId:"12323--"}&limit=50&fields=stationId,programTitle,programId,images,longDescription,starTtime,endTime,genre,language,airingAgeRating`)
+        fetch(`https://codelikeada.lgads.tv/epg/listings?stationId=${stationId?stationId:"12323--"}&limit=50&fields=stationId,programTitle,programId,images,longDescription,startTime,endTime,genre,language,airingAgeRating`)
         .then(res=>res.json())
         .then(data=>setshowList(data.result))
 
